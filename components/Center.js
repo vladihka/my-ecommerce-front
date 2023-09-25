@@ -6,7 +6,7 @@ const StyledDiv = styled.div`
     padding: 0 20px; 
 `;
 
-export default function({children}){
+export default function Center({children}){
     return (
         <StyledDiv>{children}</StyledDiv>
     )
