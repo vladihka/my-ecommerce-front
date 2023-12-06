@@ -56,11 +56,11 @@ const PriceRow = styled.div`
 `;
 
 const Price = styled.div`
-    font-size: 1rem;
+    font-size: 0.7rem;
     font-weight: 400;
     text-align: right;
     @media screen and (min-width: 768px){
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: 600;
         text-align: left;
     }
@@ -119,7 +119,7 @@ export default function ProductBox({_id,title,decription,price,images, wished=fa
                 <Title href={uri}>{title}</Title>
                 <PriceRow>
                     <Price>
-                        ${price}
+                        PLN{price}
                     </Price>
                     <FlyingButton _id={_id} src={images?.[0]}>Dodaj do koszyka</FlyingButton>
                 </PriceRow>
