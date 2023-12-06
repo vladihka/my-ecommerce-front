@@ -48,7 +48,7 @@ export default function ProductPage({product}){
                             </div>
                             <div>
                                 <FlyingButton main _id={product._id} src={product.images?.[0]}>
-                                    <CartIcon></CartIcon>Add to cart
+                                    <CartIcon></CartIcon>Dodaj do koszyka
                                 </FlyingButton>
                             </div>
                         </PriceRow>   

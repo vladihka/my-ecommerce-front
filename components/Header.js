@@ -96,13 +96,13 @@ export default function Header(){
         <StyledHeader>
             <Center>
                 <Wrapper>
-                    <Logo href={'/'}>Ecommerce</Logo>
+                    <Logo href={'/'}>HutsulStore</Logo>
                     <StyledNav mobileNavActive={mobileNavActive}>
-                        <NavLink href={'/'}>Home</NavLink>
-                        <NavLink href={'/products'}>All products</NavLink>
-                        <NavLink href={'/categories'}>Categories</NavLink>
-                        <NavLink href={'/account'}>Account</NavLink>
-                        <NavLink href={'/cart'}>Cart ({cartProducts.length})</NavLink>
+                        <NavLink href={'/'}>Strona główna</NavLink>
+                        <NavLink href={'/products'}>Wszystkie produkty</NavLink>
+                        <NavLink href={'/categories'}>Kategorie</NavLink>
+                        <NavLink href={'/account'}>Konto</NavLink>
+                        <NavLink href={'/cart'}>Koszyk ({cartProducts.length})</NavLink>
                      </StyledNav>
                      <SideIcons>
                         <Link href={'/search'}><SearchIcon></SearchIcon></Link>

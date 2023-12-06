@@ -87,37 +87,37 @@ export default function ProductReviews({product}){
 
     return(
         <div>
-            <Title>Reviews</Title>
+            <Title>Opinie</Title>
             <ColsWrapper>
                 <div>
                     <WhiteBox>
-                        <Subtitle>Add a review</Subtitle>
+                        <Subtitle>Dodać opinie</Subtitle>
                         <div>
                             <StarsRating onChange={setStars}></StarsRating>  
                         </div>
                         <Input 
                             value={title} 
                             onChange={ev => setTitle(ev.target.value)} 
-                            placeholder="Title">
+                            placeholder="Tytuł">
                         </Input>
                         <Textarea 
                             value={description}
                             onChange={ev => setDescription(ev.target.value)} 
-                            placeholder="Was it good? Pros? Cons?">
+                            placeholder="Czy to było dobre? Plusy? Cons?">
                         </Textarea>
                         <div>
-                            <Button primary onClick={submitReview}>Submit your review</Button>
+                            <Button primary onClick={submitReview}>Prześlij swoją opinie</Button>
                         </div>
                     </WhiteBox>
                 </div>
                 <div>
                     <WhiteBox>
-                        <Subtitle>All reviews</Subtitle>
+                        <Subtitle>Wszystkie opinie</Subtitle>
                         {reviewsLoading && (
                             <Spinner fullWidth={true}></Spinner>
                         )}
                         {reviews.length === 0 && (
-                            <p>No reviews :(</p>
+                            <p>Brak opinii :(</p>
                         )}
                         {reviews.length > 0 && reviews.map(review => (
                             <ReviewWrapper key={review._id}>

@@ -121,7 +121,7 @@ export default function ProductBox({_id,title,decription,price,images, wished=fa
                     <Price>
                         ${price}
                     </Price>
-                    <FlyingButton _id={_id} src={images?.[0]}>Add to cart</FlyingButton>
+                    <FlyingButton _id={_id} src={images?.[0]}>Dodaj do koszyka</FlyingButton>
                 </PriceRow>
             </ProductInfoBox>
         </ProductWrapper>   

@@ -91,7 +91,7 @@ export default function CategoryPage({category, subCategories,products:originalP
                                 <select 
                                     onChange={ev => handleFilterChange(prop.name, ev.target.value)}
                                     value={filtersValues.find(f => f.name === prop.name).value}>
-                                    <option value="all">All</option>
+                                    <option value="all">Wszystko</option>
                                     {prop.values.map(val => (
                                         <option key={val} value={val}>{val}</option>
                                     ))}
@@ -99,16 +99,16 @@ export default function CategoryPage({category, subCategories,products:originalP
                             </Filter>
                         ))}
                         <Filter>
-                            <span>Sort:</span>
+                            <span>Sortować:</span>
                             <select 
                                 value={sort} 
                                 onChange={ev => {setSort(ev.target.value); 
                                 setFiltersChanged(true);}}
                                 > 
-                                <option value="price-asc">price, lowest first</option>
-                                <option value="price-desc">price, highest first</option>
-                                <option value="_id-desc">newest first</option>
-                                <option value="_id-asc">oldest first</option>
+                                <option value="price-asc">cena: Od najniższej</option>
+                                <option value="price-desc">cena: najpierw najwyższa</option>
+                                <option value="_id-desc">najpierw najnowsze</option>
+                                <option value="_id-asc">najpierw najstarsi</option>
                             </select>
                         </Filter>
                     </FiltersWrapper>
@@ -123,7 +123,7 @@ export default function CategoryPage({category, subCategories,products:originalP
                         )}
                         {
                             products.length === 0 && (
-                                <div>Sorry, no products found</div>
+                                <div>Przepraszamy, nie znaleziono żadnych produktów</div>
                             )}
                     </div>
                 )}

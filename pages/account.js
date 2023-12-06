@@ -50,7 +50,7 @@ export default function AccountPage(){
     const [addressLoaded,setAddressLoaded] = useState(true);
     const [wishListLoaded,setWishListLoaded] = useState(true);
     const [wishedProducts, setWishedProducts] = useState([]);
-    const [activeTab, setActiveTab] = useState('Orders');
+    const [activeTab, setActiveTab] = useState('Zamówienia');
     const [orders, setOrders] = useState([]);
     const [orderLoaded, setOrderLoaded] = useState(true);
     async function logout(){
@@ -109,11 +109,11 @@ export default function AccountPage(){
                         <RevealWrapper delay={0}>
                             <WhiteBox>
                                 <Tabs 
-                                    tabs={['Orders','Wishlist']} 
+                                    tabs={['Zamówienia','Lista życzeń']} 
                                     active={activeTab} 
                                     onChange={setActiveTab}>
                                 </Tabs>
-                                {activeTab === 'Orders' && (
+                                {activeTab === 'Zamówienia' && (
                                     <>
                                         {!orderLoaded && (
                                             <Spinner fullWidth={true}></Spinner>
@@ -130,7 +130,7 @@ export default function AccountPage(){
                                         )}
                                     </>
                                 )}
-                                {activeTab === 'Wishlist' && (
+                                {activeTab === 'Lista życzeń' && (
                                     <>
                                         {!wishListLoaded && (
                                             <Spinner fullWidth={true}></Spinner>
@@ -147,10 +147,10 @@ export default function AccountPage(){
                                             {wishedProducts.length === 0 && (
                                                     <>
                                                         {session && (
-                                                            <p>Your wishlist is empty</p>
+                                                            <p>Twoja lista życzeń jest pusta</p>
                                                         )}
                                                         {!session && (
-                                                            <p>Login to add products to your wishlist</p>
+                                                            <p>Zaloguj się, aby dodać produkty do swojej listy życzeń</p>
                                                         )}
                                                     </>
                                                 )}
@@ -164,14 +164,14 @@ export default function AccountPage(){
                     <div>
                         <RevealWrapper delay={100}>
                             <WhiteBox>
-                                <h2>{session ? 'Account details' : 'Login'}</h2>
+                                <h2>{session ? 'Szczegóły Konta' : 'Zaloguj sie'}</h2>
                                 {!addressLoaded && (
                                     <Spinner fullWidth={true}></Spinner>
                                 )}
                                 {addressLoaded && session && (
                                     <>
                                         <Input type="text"
-                                        placeholder="Name"
+                                        placeholder="Nazwa"
                                         value={name}
                                         name="name"
                                         onChange={ev => setName(ev.target.value)} />
@@ -182,38 +182,38 @@ export default function AccountPage(){
                                         onChange={ev => setEmail(ev.target.value)}/>
                                     <CityHolder>
                                     <Input type="text"
-                                            placeholder="City"
+                                            placeholder="Miasto"
                                             value={city}
                                             name="city"
                                             onChange={ev => setCity(ev.target.value)}/>
                                     <Input type="text"
-                                            placeholder="Postal Code"
+                                            placeholder="Kod pocztowy"
                                             value={postalCode}
                                             name="postalCode"
                                             onChange={ev => setPostalCode(ev.target.value)}/>
                                     </CityHolder>
                                     <Input type="text"
-                                        placeholder="Street Address"
+                                        placeholder="Nazwa ulicy"
                                         value={streetAddress}
                                         name="streetAddress"
                                         onChange={ev => setStreetAddress(ev.target.value)}/>
                                     <Input type="text"
-                                        placeholder="Country"
+                                        placeholder="Kraj"
                                         value={country}
                                         name="country"
                                         onChange={ev => setCountry(ev.target.value)}/>
                                     <Button black block
                                             onClick={saveAdress}>
-                                    Save
+                                    Zatwierdź
                                     </Button>
                                     <hr></hr>
                                     </>
                                 )}  
                                 {session && (
-                                    <Button primary onClick={logout}>Logout</Button>
+                                    <Button primary onClick={logout}>Wyloguj</Button>
                                 )}
                                 {!session && (
-                                    <Button primary onClick={login}>Login with Google</Button>
+                                    <Button primary onClick={login}>Zaloguj się za pomocą Google</Button>
                                 )}
                             </WhiteBox>
                         </RevealWrapper>

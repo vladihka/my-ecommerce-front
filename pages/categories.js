@@ -61,7 +61,7 @@ export default function CategoriesPage({mainCategories, categoriesProducts, wish
                         <CategoryTitle>
                             <h2>{cat.name}</h2>
                             <div>
-                                <Link href={'/category/'+cat._id}>Show all</Link>
+                                <Link href={'/category/'+cat._id}>Pokaż wszystko</Link>
                             </div>
                         </CategoryTitle>
                         <CategoryGrid>
@@ -72,7 +72,7 @@ export default function CategoriesPage({mainCategories, categoriesProducts, wish
                             ))}
                             <RevealWrapper delay={categoriesProducts[cat._id].length*50}>
                                 <ShowAllSquare href={'/category/'+cat._id}>
-                                    Show all &rarr;
+                                    Pokaż wszystko &rarr;
                                 </ShowAllSquare>
                             </RevealWrapper>
                         </CategoryGrid>

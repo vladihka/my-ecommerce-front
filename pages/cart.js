@@ -164,8 +164,8 @@ export default function CartPage() {
         <Center>
           <ColumnsWrapper>
             <Box>
-              <h1>Thanks for your order!</h1>
-              <p>We will email you when your order will be sent.</p>
+              <h1>Dziękujemy za zamówienie!</h1>
+              <p>Po wysłaniu zamówienia wyślemy Ci wiadomość e-mail.</p>
             </Box>
           </ColumnsWrapper>
         </Center>
@@ -179,17 +179,17 @@ export default function CartPage() {
         <ColumnsWrapper>
           <RevealWrapper delay={0}>
             <Box>
-              <h2>Cart</h2>
+              <h2>Koszyk</h2>
               {!cartProducts?.length && (
-                <div>Your cart is empty</div>
+                <div>Twój koszyk jest pusty</div>
               )}
               {products?.length > 0 && (
                 <Table>
                   <thead>
                     <tr>
-                      <th>Product</th>
-                      <th>Quantity</th>
-                      <th>Price</th>
+                      <th>Produkt</th>
+                      <th>Ilość</th>
+                      <th>Cena</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -216,15 +216,15 @@ export default function CartPage() {
                       </tr>
                     ))}
                     <tr className="subtotal"> 
-                      <td colSpan={2}>Products</td>
+                      <td colSpan={2}>Produkty</td>
                       <td>${productsTotal}</td>
                     </tr>
                     <tr className="subtotal">
-                      <td colSpan={2}>Shipping</td>
+                      <td colSpan={2}>Wysyłka</td>
                       <td>${shippingFee}</td>
                     </tr>
                     <tr className="subtotal total">
-                      <td colSpan={2}>Total</td>
+                      <td colSpan={2}>Całkowity koszt</td>
                       <td>${productsTotal + parseInt(shippingFee) || 0}</td>
                     </tr>
                   </tbody>
@@ -237,7 +237,7 @@ export default function CartPage() {
             <Box>
               <h2>Order information</h2>
                 <Input type="text"
-                      placeholder="Name"
+                      placeholder="Nazwa"
                       value={name}
                       name="name"
                       onChange={ev => setName(ev.target.value)} />
@@ -248,29 +248,29 @@ export default function CartPage() {
                       onChange={ev => setEmail(ev.target.value)}/>
                 <CityHolder>
                   <Input type="text"
-                        placeholder="City"
+                        placeholder="Miasto"
                         value={city}
                         name="city"
                         onChange={ev => setCity(ev.target.value)}/>
                   <Input type="text"
-                        placeholder="Postal Code"
+                        placeholder="Kod pocztowy"
                         value={postalCode}
                         name="postalCode"
                         onChange={ev => setPostalCode(ev.target.value)}/>
                 </CityHolder>
                 <Input type="text"
-                      placeholder="Street Address"
+                      placeholder="Nazwa ulicy"
                       value={streetAddress}
                       name="streetAddress"
                       onChange={ev => setStreetAddress(ev.target.value)}/>
                 <Input type="text"
-                      placeholder="Country"
+                      placeholder="Kraj"
                       value={country}
                       name="country"
                       onChange={ev => setCountry(ev.target.value)}/>
                 <Button black block
                         onClick={goToPayment}>
-                  Continue to payment
+                  Kontynuuj płatność
                 </Button>
               </Box>
             </RevealWrapper>
