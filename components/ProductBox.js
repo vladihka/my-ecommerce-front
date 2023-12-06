@@ -119,7 +119,7 @@ export default function ProductBox({_id,title,decription,price,images, wished=fa
                 <Title href={uri}>{title}</Title>
                 <PriceRow>
                     <Price>
-                        PLN{price}
+                        PLN {price}
                     </Price>
                     <FlyingButton _id={_id} src={images?.[0]}>Dodaj do koszyka</FlyingButton>
                 </PriceRow>

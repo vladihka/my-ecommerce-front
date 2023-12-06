@@ -217,15 +217,15 @@ export default function CartPage() {
                     ))}
                     <tr className="subtotal"> 
                       <td colSpan={2}>Produkty</td>
-                      <td>PLN{productsTotal}</td>
+                      <td>PLN {productsTotal}</td>
                     </tr>
                     <tr className="subtotal">
                       <td colSpan={2}>Wysyłka</td>
-                      <td>PLN{shippingFee}</td>
+                      <td>PLN {shippingFee}</td>
                     </tr>
                     <tr className="subtotal total">
                       <td colSpan={2}>Całkowity koszt</td>
-                      <td>PLN{productsTotal + parseInt(shippingFee) || 0}</td>
+                      <td>PLN {productsTotal + parseInt(shippingFee) || 0}</td>
                     </tr>
                   </tbody>
                 </Table>
