@@ -211,7 +211,7 @@ export default function CartPage() {
                             onClick={() => moreOfThisProduct(product._id)}>+</Button>
                         </td>
                         <td>
-                          PLN{cartProducts.filter(id => id === product._id).length * product.price}
+                          PLN {cartProducts.filter(id => id === product._id).length * product.price}
                         </td>
                       </tr>
                     ))}
