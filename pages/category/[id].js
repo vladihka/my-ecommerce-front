@@ -16,11 +16,17 @@ const CategoryHeader = styled.div`
     h1{
         font-size: 1.5em;
     }
+  @media(max-width: 500px){
+    flex-direction: column;
+  }
 `;
 
 const FiltersWrapper = styled.div`
     display: flex;
     gap: 15px;
+  @media(max-width: 500px){
+    padding-bottom: 20px;
+  }
 `;
 
 const Filter = styled.div`

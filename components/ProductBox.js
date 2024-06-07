@@ -1,12 +1,12 @@
 import { styled } from "styled-components"
-import Button, { ButtonStyle } from "./Button";
-import CartIcon from "./icons/CartIcon";
 import Link from "next/link";
 import FlyingButton from "./FlyingButton";
 import HeartOutlineIcon from "./icons/HeartOtline";
 import HeartSolidIcon from "./icons/HeartSolidIcon";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
+import {useSession} from "next-auth/react";
+import {useRouter} from "next/router";
 
 const ProductWrapper = styled.div`
     button{
@@ -93,9 +93,18 @@ export default function ProductBox({_id,title,decription,price,images, wished=fa
 
     const [isWished, setIsWished] = useState(wished);
 
+    const session = useSession()
+
+    const router = useRouter()
+
+
     function addToWishList(ev){
         ev.preventDefault();
         const nextValue = !isWished;
+        if(!session.data?.user){
+            router.push('/account')
+            return
+        }
         if(nextValue === false){
             onRemoveFromWishList(_id);
         }

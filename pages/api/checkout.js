@@ -31,7 +31,7 @@ export default async function handler(req,res) {
       line_items.push({
         quantity,
         price_data: {
-          currency: 'USD',
+          currency: 'PLN',
           product_data: {name:productInfo.title},
           unit_amount: quantity * productInfo.price * 100,
         },
@@ -54,6 +54,7 @@ export default async function handler(req,res) {
     line_items,
     mode: 'payment',
     customer_email: email,
+    locale: "pl",
     success_url: process.env.PUBLIC_URL + '/cart?success=1',
     cancel_url: process.env.PUBLIC_URL + '/cart?canceled=1',
     metadata: {orderId:orderDoc._id.toString()},
@@ -63,7 +64,7 @@ export default async function handler(req,res) {
         shipping_rate_data: {
           display_name: 'shipping fee',
           type: 'fixed_amount',
-          fixed_amount: {amount: shippingFeeCents, currency: 'USD'}
+          fixed_amount: {amount: shippingFeeCents, currency: 'PLN'}
         }
       }
     ]
