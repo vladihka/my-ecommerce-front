@@ -43,7 +43,7 @@ export default function FAQPage(){
                     </FAQComponent>
                     <FAQComponent>
                         <FAQName>6. Jak mogę założyć konto w sklepie?</FAQName>
-                        <FAQDescription>Aby założyć konto, kliknij "konto" zostaniesz przekierowany na stronę z swoim kontem, gdzie zmożesz zalogować się albo założyć konto</FAQDescription>
+                        <FAQDescription>Aby założyć konto, kliknij &quot;konto&quot; zostaniesz przekierowany na stronę z swoim kontem, gdzie zmożesz zalogować się albo założyć konto</FAQDescription>
                     </FAQComponent>
                     <FAQComponent>
                         <FAQName>7. Czy mogę dodać komentarz produktu?</FAQName>
