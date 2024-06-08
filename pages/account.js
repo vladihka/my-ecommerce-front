@@ -150,7 +150,7 @@ export default function AccountPage() {
                 errors.password = "Proszę podać hasło.";
             } else if (!isValidPassword(password)) {
                 errors.password =
-                    "Hasło musi mieć minimum 8 znaków, zawierać co najmniej jedną dużą literę, jedną małą literę, jedną cyfrę i jeden znak specjalny.";
+                    "Hasło musi mieć minimum 8 znaków, zawierać co najmniej 1 dużą literę, 1 małą literę, 1 cyfrę i 1 znak specjalny.";
             }
 
             if (Object.keys(errors).length > 0) {
