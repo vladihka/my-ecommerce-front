@@ -40,8 +40,3 @@ export default async function handler(req,res) {
 export const config = {
   api: {bodyParser:false,}
 };
-
-
-// cherub-bonny-proper-speedy
-
-// acct_1NokpDJ74f7AuYrd  whsec_6a841199f1f94594b58e3b7fe318c0a8ca7874dbb158788cd24a980e8e3454f5
